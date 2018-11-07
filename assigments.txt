@@ -1,0 +1,13 @@
+
+
+--------- CREATE NEW PAGES --------
+1. Create "portfolios", "blogs" and "cv" page.
+2. Make all of the pages class component.
+3. Return just simple text "I am Blogs Page...."
+
+
+------------ GET POST --------------------
+1. In getInitialProps create new get request to axios to endpoint: 'https://jsonplaceholder.typicode.com/posts/:postId'
+2. Get data from response and pass them to props
+3. in render function of portfolio display data of post you just fetched
+4. good luck (:
