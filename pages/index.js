@@ -53,7 +53,7 @@ class Index extends SuperComponent {
 
     return (
       <BaseLayout>
-        <h1 className='fromPage'> I am Index Page from Class Component</h1>
+        <h1 className='fromPage'> I am Index Page from Class Component, and I was updated!!!!</h1>
         <h2> { title } </h2>
         <h2> { userData.title } </h2>
         <button onClick={this.updateTitle}> Change Title </button>
