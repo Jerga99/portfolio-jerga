@@ -6,8 +6,27 @@
 3. Return just simple text "I am Blogs Page...."
 
 
+
+
+
 ------------ GET POST --------------------
 1. In getInitialProps create new get request to axios to endpoint: 'https://jsonplaceholder.typicode.com/posts/:postId'
 2. Get data from response and pass them to props
 3. in render function of portfolio display data of post you just fetched
 4. good luck (:
+
+
+
+
+------------ NEW PAGE WRAPPING COMPONENT --------------------
+1. In components folder create "BasePage" Functional Component
+2. Return from this component <div> with className "base-page"
+3. Inside Of <div> return "Container" component from "reactstrap"
+4. Finaly, inside of "Container" return "props.children"
+    NOTE: Don't forget to get props from argument of function
+5. Wrap all of our pages inside of "BasePage", (don't do it for index page)
+   e.g. <BaseLayout>
+          <BasePage>
+            ....
+6. in main.scss create styles for base-bage, apply padding-top of 150px;
+7. good luck and have fun (:

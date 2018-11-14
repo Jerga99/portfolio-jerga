@@ -3,16 +3,31 @@
 // PAGES
 @import './index';
 
+// COMPONENTS
+@import './header';
+
 html, body {
   height:100%;
   width:100%;
   font-family: 'Montserrat', 'Helvetica';
 }
 
+.clickable {
+  cursor: pointer;
+}
 
 .self-typed {
   font-size: 31px;
   font-weight: bold;
   letter-spacing: 2px;
+  color: white;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.base-page {
+  padding-top: 150px;
   color: white;
 }
