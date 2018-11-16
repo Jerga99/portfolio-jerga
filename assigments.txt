@@ -30,3 +30,14 @@
             ....
 6. in main.scss create styles for base-bage, apply padding-top of 150px;
 7. good luck and have fun (:
+
+
+
+
+
+------------ NEW PAGE WRAPPING COMPONENT --------------------
+1. Create new input for textarea, handleChange of this textArea and setState of "description"
+2. Create  select with multiple options, handleChange of this select and setState of "language"
+3. Feel free to check React Forms documentation I showed you in previous lecture.
+4. Alert state with "title" , "description" and "language"
+5. good luck and have fun (:
