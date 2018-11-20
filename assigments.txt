@@ -41,3 +41,59 @@
 3. Feel free to check React Forms documentation I showed you in previous lecture.
 4. Alert state with "title" , "description" and "language"
 5. good luck and have fun (:
+
+
+
+
+
+------------ PORTFOLIO MODEL --------------------
+1. Create Portfolio Model similar to Book
+2. Desribe this model with:
+ userId: String
+ title: String,
+ company: String,
+ location: String,
+ position: String,
+ description: String,
+ startDate: Date
+ endDate: Date
+3. Good luck and have fun (:
+
+
+
+------------ PORTFOLIO ROUTES --------------------
+1. Create GET route to get all portfolios, endpoint path: '/api/v1/portfolios'
+2. Create POST route to save a portfolio, endpoint path: '/api/v1/portfolios'
+3. To both routes provide "checkJWT" and "checkRole('siteOwner')" middlewares
+4. Separate functionality to controllers and routes folders as we did with books.
+5. Get inspired by Books, functionality for portfolios is the same.
+6. Good luck and have fun (:
+
+
+
+------------ PORTFOLIO ROUTES ++ --------------------
+1. Create PATCH route to update portfolio, endpoint path: '/api/v1/portfolios/:id'
+2. Create DELETE route to delete portfolio, endpoint path: '/api/v1/portfolios/:id'
+
+
+
+
+------------ GET ALL PORTFOLIOS --------------------
+1. In actions/index.js create new function to get all portfolios, you can call it "getPortfolios",
+    - Send GET request to 'http://localhost:3000/api/v1/portfolios'
+    - don't forget to provide auth headers
+    - Get inspired by getSecretData we created before
+2. In portfolios.js Page in getInitialProps call newly created function getPortfolios
+   and return fetched portfolios.
+3. Refactor our page to work with portfolios
+4. Display these data in render function:
+  - portfolio-card-header: {portfolio.position}
+  - portfolio-card-city: {portfolio.location}
+  - portfolio-card-title: {portfolio.title}
+  - portfolio-card-text: {portfolio.description}
+5. Good luck and have fun (:
+
+
+
+
+

@@ -29,8 +29,13 @@ html, body {
   position: absolute;
 }
 
+.error {
+  font-weight: 700;
+  color: red;
+}
+
 .base-page {
-  padding-top: 150px;
+  padding: 150px 0 100px 0;
   color: black;
   background-color: #ecedee;
   min-height: 100vh;
