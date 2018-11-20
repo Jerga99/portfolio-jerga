@@ -1,0 +1,160 @@
+// MIXINS
+@mixin background-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+// Blog LISTING!
+
+.blog-listing-page {
+  min-height: 100vh;
+  background-color: #ecedee;
+
+  .blog-body {
+    padding: 50px 0 0 0;
+  }
+
+  .post-preview {
+    > a {
+      color: $gray-900;
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        color: $primary;
+      }
+      > .post-title {
+        font-size: 30px;
+        margin-top: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      > .post-subtitle {
+        font-weight: 300;
+        margin: 0 0 10px;
+        color: #565656;
+      }
+    }
+
+    > .post-meta {
+      font-size: 18px;
+      font-style: italic;
+      margin-top: 0;
+      color: $gray-600;
+      > a {
+        text-decoration: none;
+        color: $gray-900;
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+          color: $primary;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      > a {
+        > .post-title {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  .masthead {
+    // TIP: Background images are set within the HTML using inline CSS!
+    background: no-repeat center center;
+    background-color: $gray-600;
+    background-attachment: scroll;
+    position: relative;
+    @include background-cover;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $gray-900;
+      opacity: 0.5;
+    }
+    .page-heading,
+    .post-heading,
+    .site-heading {
+      padding: 200px 0 150px;
+      color: white;
+      @media only screen and (min-width: 768px) {
+        padding: 200px 0;
+      }
+    }
+    .page-heading,
+    .site-heading {
+      text-align: center;
+      h1 {
+        font-size: 50px;
+        margin-top: 0;
+        font-weight: 700;
+      }
+      .subheading {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.1;
+        display: block;
+        margin: 10px 0 0;
+      }
+      @media only screen and (min-width: 768px) {
+        h1 {
+          font-size: 80px;
+        }
+      }
+    }
+    .post-heading {
+      h1 {
+        font-size: 35px;
+      }
+      .meta,
+      .subheading {
+        line-height: 1.1;
+        display: block;
+      }
+      .subheading {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0 30px;
+      }
+      .meta {
+        font-size: 20px;
+        font-weight: 300;
+        font-style: italic;
+
+        a {
+          color: $white;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        h1 {
+          font-size: 55px;
+        }
+        .subheading {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+
+  // Styling for the footer
+  footer {
+    padding: 50px 0 65px;
+    .list-inline {
+      margin: 0;
+      padding: 0;
+    }
+    .copyright {
+      font-size: 14px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+}
