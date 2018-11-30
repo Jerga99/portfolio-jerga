@@ -10,14 +10,39 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      isFlipping: false
+    }
+
     this.roles = ['Developer', 'Tech Lover', 'Team Player', 'Course Creater', 'React.js', 'Angular'];
   }
 
+  componentDidMount() {
+    this.animateCard();
+  }
+
+  componentWillUnmount() {
+    this.cardAnimationInterval && clearInterval(this.cardAnimationInterval);
+  }
+
+  animateCard() {
+    this.cardAnimationInterval = setInterval(() => {
+      this.setState({
+        isFlipping: !this.state.isFlipping
+      });
+    }, 60000);
+  }
+
+
+
   render() {
     const { isAuthenticated, user } = this.props.auth;
+    const { isFlipping } = this.state;
 
     return (
-      <BaseLayout className="cover" {...this.props.auth} headerType="index">
+      <BaseLayout className={`cover ${isFlipping ? 'cover-1' : 'cover-0'}`} {...this.props.auth}
+                  headerType="index"
+                  title="Filip Jerga - Portfolio">
         <div className="main-section">
           <div className="background-image">
             <img src="/static/images/background-index.png" />
@@ -26,16 +51,28 @@ class Index extends React.Component {
             <Row>
               <Col md="6">
                 <div className="hero-section">
-                  <div className={`flipper`}>
-                    <div className="back">
+                  <div className={`flipper ${isFlipping ? 'isFlipping' : ''}`}>
+                    <div className="front">
                       <div className="hero-section-content">
                         <h2> Full Stack Web Developer </h2>
                         <div className="hero-section-content-intro">
                           Have a look at my portfolio and job history.
                         </div>
                       </div>
-                      <img className="image" src="/static/images/section-1.png"/>
+                      <img alt="Guy programming welcome picture" className="image" src="/static/images/section-1.png"/>
                       <div className="shadow-custom">
+                        <div className="shadow-inner"> </div>
+                      </div>
+                    </div>
+                    <div className="back">
+                      <div className="hero-section-content">
+                        <h2> Get Your Projects Done </h2>
+                        <div className="hero-section-content-intro">
+                          Profesional and top quality service in web development.
+                        </div>
+                      </div>
+                      <img alt="Guy programming welcome picture" className="image" src="/static/images/section-2.png"/>
+                      <div className="shadow-custom shadow-custom-2">
                         <div className="shadow-inner"> </div>
                       </div>
                     </div>
@@ -64,9 +101,9 @@ class Index extends React.Component {
 
 
                 <div className="hero-welcome-bio">
-                  <h1>
+                  <h2>
                     Let's take a look on my work.
-                  </h1>
+                  </h2>
                 </div>
               </Col>
             </Row>

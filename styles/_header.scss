@@ -1,4 +1,5 @@
 // HEADER
+
 .port-navbar.port-nav-base {
   width: 100%;
   z-index: 15;
@@ -34,9 +35,41 @@
       }
     }
   }
+
+  .port-dropdown-menu {
+
+    .port-dropdown-item {
+      color: #4e4e4e;
+
+      &.active {
+        color: #dba919;
+      }
+    }
+
+    .port-dropdown-toggle {
+      color: white;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .port-navbar.port-nav-base.port-nav-default {
   padding: 30px;
   background-color: $secondary !important;
 }
+
+
+.bg-transparent.menu-open {
+  background-color: #2C3E50 !important;
+}
+
+.bg-transparent.menu-close {
+  transition: 1s;
+}
+
+
+
+
+
+
