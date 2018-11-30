@@ -94,6 +94,94 @@
 5. Good luck and have fun (:
 
 
+------------ BLOG MODEL --------------------
+1. Create Blog Model similar to Portfolio
+2. Describe this model with:
+  userId: - String, required
+  slug: String, unique, sparse (reseach what unique and sparse do)
+  title: String, required
+  subTitle: String, required
+  story: String, required
+  createdAt: Date, default: Date.now
+  updatedAt: Date, default: Date.now
+  status: String, default: 'draft'
+  author: String, required
+3. Good luck and have fun (:
+
+
+------------ CREATE BLOG --------------------
+1. Create new controller in controllers and call it blog.js
+2. Create function "createBlog" and export it from controller
+3. Implement funcionality to create blog, use as example save portfolio
+   NOTE: provide to blog also user.name and user.sub
+  e.g: blog.userId = user.sub;
+       blog.author = user.name;
+4. Create blog.js in "routes" folder
+5. Create new POST route of path "/" and call createBlog inside and provide middlewares
+6. Register routes as blogRoutes with path "/api/v1/blogs" in index.js similiary as portfolios
+7. Good luck and have fun (:
+
+
+
+------------ GET BLOG BY ID --------------------
+1. Create function "getBlogById" and export it from controller
+2. Implement funcionality to get Blog by id
+3. Create new GET route of path "/:id" and call getBlogById inside
+4. Good luck and have fun (:
+
+
+
+
+------------ CREATE BLOG --------------------
+1. Create function "createBlog" in actions/index.js, you can remove saveBlog
+2. Send POST request with blogData to "/api/v1/blogs", similiar function as createPortfolio
+3. In blogEditor.js just change function name to createBlog, implement "catch" part of function
+   and setState isLoading to false
+4. Good luck and have fun (:
+
+
+
+
+------------ UPDATE BLOG - SERVER --------------------
+1. Create function "updateBlog" and export it from controller
+2. Implement funcionality to update blog, use as example update portfolio
+   NOTE: add updatedAt property to blog before you will update it
+   e.g. : foundBlog.updatedAt = new Date();
+3. Create new PATCH route of path "/:id" and call updateBlog inside and provide middlewares
+4. Good luck and have fun (:
+
+
+
+
+------------ UPDATE BLOG - LITTLE HARDER (: --------------------
+1. Create function "updateBlog" in actions/index.js
+2. Implement funcionality to send a PATCH request to /blogs/:id,
+   provide blogData and authHeaders
+3. In blogEditorUpdate.js implement updateBlog function,
+   you can copy saveBlog function from blogEditor.js
+   NOTE: Get Blog id from this.props.blog._id, you need this id to know where to send a request
+         You don't need lockId
+         You don't need to redirect after successful update
+4. provide updateBlog to "save" of SlateEditor
+5. Test it out, create blog, do some changes try to add every block type and marking,
+    updateBlog and refresh. Changes should persist.
+6. Good luck and have fun (:
+
+
+------------ GET BLOGS - LITTLE HARDER (: --------------------
+1. Create function "getBlogs" in actions/index.js
+2. Implement funcionality to send a GET request to /blogs
+3. In blogs.js create getInitialProps function inside call newly created getBlogs
+   and dont' forget to return fetched blogs to the page so you can get them on props.
+4. Create function to map over blogs and render blogs.
+5. Good luck and have fun (:
+
+
+
+
+
+
+
 
 
 

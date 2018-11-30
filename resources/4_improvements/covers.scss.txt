@@ -1,0 +1,8 @@
+.cover-0 {
+  animation: fgradient 1s ease;
+}
+
+.cover-1 {
+  background-image: linear-gradient(45deg, rgb(254, 202, 83), rgb(253, 157, 97));
+  animation: sgradient 1s ease;
+}

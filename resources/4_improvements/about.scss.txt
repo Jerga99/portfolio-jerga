@@ -1,0 +1,49 @@
+.about-page {
+  .left-side {
+    margin-top: 10vh;
+
+    color: black;
+    text-align: left;
+  }
+
+  .fadein {
+    opacity: 0;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+
+    -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+  .title {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    -webkit-animation-delay: 2.2s;
+    -moz-animation-delay:2.2s;
+    animation-delay: 2.2s;
+    font-size: 33px;
+  }
+
+  .subsubTitle {
+    -webkit-animation-delay: 3.6s;
+    -moz-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+    font-size: 18px;
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+}
