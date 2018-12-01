@@ -14,7 +14,7 @@ class Index extends React.Component {
       isFlipping: false
     }
 
-    this.roles = ['Developer', 'Tech Lover', 'Team Player', 'Course Creater', 'React.js', 'Angular'];
+    this.roles = ['Developer', 'Tech Lover', 'Team Player', 'Course Creator', 'React.js', 'Angular'];
   }
 
   componentDidMount() {
@@ -108,6 +108,9 @@ class Index extends React.Component {
               </Col>
             </Row>
           </Container>
+          <span className="service-link">Vector illustration credit:{' '}
+            <a href="https://www.Vecteezy.com/">vecteezy.com</a>
+          </span>
         </div>
       </BaseLayout>
     )

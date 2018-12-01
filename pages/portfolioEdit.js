@@ -36,7 +36,6 @@ class PortfolioEdit extends React.Component {
 
   updatePortfolio(portfolioData, {setSubmitting}) {
     setSubmitting(true);
-    debugger;
 
     updatePortfolio(portfolioData)
       .then((portfolio) => {
