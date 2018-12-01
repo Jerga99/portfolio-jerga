@@ -13,7 +13,6 @@ exports.getBooks = (req, res) => {
 
 exports.saveBook = (req, res) => {
   const bookData = req.body;
-  console.log(bookData);
   const book = new Book(bookData);
 
   book.save((err, createdBook) => {

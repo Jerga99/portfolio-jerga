@@ -150,6 +150,17 @@
   transform: rotateY(180deg);
 }
 
+.service-link {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-style: italic;
+  font-size: 13px;
+
+  > a {
+    color: white;
+  }
+}
 
 
 
