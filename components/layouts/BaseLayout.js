@@ -17,7 +17,7 @@ const BaseLayout = (props) => {
         <meta property="og:url" content={`${process.env.BASE_URL}`}/>
         <meta property="og:type" content="website"/>
         <meta property="og:description" content="My name is Filip Jerga and I am an experienced software engineer and freelance developer."/>
-
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
         {cannonical && <link rel="cannonical" href={`${process.env.BASE_URL}${cannonical}`}/>}
         <link rel="icon" type="image/ico" href="/static/favicon.ico"/>
       </Head>
