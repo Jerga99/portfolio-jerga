@@ -4,8 +4,8 @@ import Cookies from 'js-cookie';
 import { getCookieFromReq } from '../helpers/utils';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/api/v1',
-  timeout: 3000
+  baseURL: `${process.env.BASE_URL}/api/v1`,
+  timeout: 4000
 });
 
 
