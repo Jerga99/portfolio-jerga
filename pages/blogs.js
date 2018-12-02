@@ -107,9 +107,15 @@ class Blogs extends React.Component {
             </Container>
           </footer>
         </BasePage>
+        <style jsx>
+          {`
+            @import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+          `}
+        </style>
       </BaseLayout>
     )
   }
 }
 
 export default Blogs;
+
