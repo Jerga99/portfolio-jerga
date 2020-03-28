@@ -25,54 +25,60 @@ const validateInputs = (values) => {
   return errors;
 }
 
+const INITIAL_VALUES = {
+  title: '',
+  company: '',
+  location: '',
+  position: '',
+  description: '',
+  startDate: '',
+  endDate: ''
+};
+
 const PortfolioCreateForm = ({initialValues, onSubmit, error}) => (
   <div>
     <Formik
-      initialValues={initialValues}
+      initialValues={INITIAL_VALUES}
       validate={validateInputs}
-      onSubmit={onSubmit}
+      onSubmit={(values, { setSubmitting }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
+      }}
     >
       {({ isSubmitting }) => (
         <Form>
-          <Field type="text"
-                 name="title"
-                 label="Title"
-                 component={PortInput}/>
-          <Field type="text"
-                 name="company"
-                 label="Company"
-                 component={PortInput}/>
-          <Field type="text"
-                 name="location"
-                 label="Location"
-                 component={PortInput}/>
-          <Field type="text"
-                 name="position"
-                 label="Position"
-                 component={PortInput}/>
-          <Field type="textarea"
-                 name="description"
-                 label="Description"
-                 component={PortInput}/>
-
-          <Field name="startDate"
-                 label="Start Date"
-                 initialDate={initialValues.startDate}
-                 component={PortDate}/>
-
-          <Field name="endDate"
-                 label="End Date"
-                 canBeDisabled={true}
-                 initialDate={initialValues.endDate}
-                 component={PortDate}/>
-          { error &&
-            <Alert color="danger">
-              {error}
-            </Alert>
-          }
-          <Button color="success" size="lg" type="submit" disabled={isSubmitting}>
+          <Field label="Title" type="text" name="title" component={PortInput} />
+          <Field
+            label="Company"
+            type="text"
+            name="company"
+            component={PortInput}
+          />
+          <Field
+            label="Location"
+            type="text"
+            name="location"
+            component={PortInput}
+          />
+          <Field
+            label="Position"
+            type="text"
+            name="position"
+            component={PortInput}
+          />
+          <Field
+            label="Description"
+            type="textarea"
+            name="description"
+            component={PortInput}
+          />
+          <Field label="Start Date" name="startDate" component={PortDate} />
+          <Field label="End Date" name="endDate" component={PortDate} />
+          <button type="submit" disabled={isSubmitting}>
             Create
-          </Button>
+          </button>
         </Form>
       )}
     </Formik>
@@ -97,71 +103,3 @@ export default PortfolioCreateForm;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-
-
-// export default class PortfolioCreateForm extends React.Component {
-
-//   constructor(props) {
-//     super(props);
-//     this.state = {title: '', description: '', language: ''};
-
-//     this.handleChange = this.handleChange.bind(this);
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//   }
-
-//   handleChange(event) {
-//     const field = event.target.name;
-//     this.setState({[field]: event.target.value});
-//   }
-
-//   handleSubmit(event) {
-//     alert('A name was submitted: ' + this.state.title + ' ' + this.state.description + ' ' + this.state.language);
-//     event.preventDefault();
-//   }
-
-//   render() {
-//     return (
-//       <form onSubmit={this.handleSubmit}>
-//         <Label>
-//           Name:
-//           <input name="title" type="text" value={this.state.value} onChange={this.handleChange} />
-//         </Label>
-//         <Label>
-//           Description:
-//           <textarea name="description" value={this.state.description} onChange={this.handleChange} />
-//         </Label>
-//         <Label>
-//           Pick your favorite Programming Language:
-//           <select name="language" value={this.state.language} onChange={this.handleChange}>
-//             <option value="javascript">Javascript</option>
-//             <option value="java">Java</option>
-//             <option value="c++">C++</option>
-//             <option value="c#">C#</option>
-//           </select>
-//         </Label>
-//         <input type="submit" value="Submit" />
-//       </form>
-//     );
-//   }
-// }

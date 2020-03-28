@@ -66,4 +66,4 @@ class PortfolioNew extends React.Component {
   }
 }
 
-export default withAuth('siteOwner')(PortfolioNew);
+export default withAuth()(PortfolioNew);
