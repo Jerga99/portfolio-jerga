@@ -35,7 +35,7 @@
     "mongoose": "^5.3.12",
     "next": "^7.0.2",
     "next-routes": "^1.4.2",
-    "node-sass": "^4.9.4",
+    "node-sass": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "react": "^16.6.0",
     "react-datepicker": "^1.8.0",
